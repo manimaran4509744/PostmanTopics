@@ -1,0 +1,102 @@
+{
+	"info": {
+		"_postman_id": "b27013b4-f67a-4c2e-aa3d-17cd0d04d01b",
+		"name": "CopyParameterofOneRequestToAnother",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25772096"
+	},
+	"item": [
+		{
+			"name": "we'regoingtocopythisparamsonly",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.google.com/search?q=jsonpathfinder&rlz=1C1YTUH_enIN1035IN1035&oq=jsonpathfinder&aqs=chrome.0.69i59j0i10i131i433i512j0i10i512l8.2312j0j15&sourceid=chrome&ie=UTF-8",
+					"protocol": "https",
+					"host": [
+						"www",
+						"google",
+						"com"
+					],
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "jsonpathfinder"
+						},
+						{
+							"key": "rlz",
+							"value": "1C1YTUH_enIN1035IN1035"
+						},
+						{
+							"key": "oq",
+							"value": "jsonpathfinder"
+						},
+						{
+							"key": "aqs",
+							"value": "chrome.0.69i59j0i10i131i433i512j0i10i512l8.2312j0j15"
+						},
+						{
+							"key": "sourceid",
+							"value": "chrome"
+						},
+						{
+							"key": "ie",
+							"value": "UTF-8"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PastingParamsRequest",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://www.google.com/search?q=jsonpathfinder&rlz=1C1YTUH_enIN1035IN1035&oq=jsonpathfinder&aqs=chrome.0.69i59j0i10i131i433i512j0i10i512l8.2312j0j15&sourceid=chrome&ie=UTF-8",
+					"protocol": "https",
+					"host": [
+						"www",
+						"google",
+						"com"
+					],
+					"path": [
+						"search"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "jsonpathfinder"
+						},
+						{
+							"key": "rlz",
+							"value": "1C1YTUH_enIN1035IN1035"
+						},
+						{
+							"key": "oq",
+							"value": "jsonpathfinder"
+						},
+						{
+							"key": "aqs",
+							"value": "chrome.0.69i59j0i10i131i433i512j0i10i512l8.2312j0j15"
+						},
+						{
+							"key": "sourceid",
+							"value": "chrome"
+						},
+						{
+							"key": "ie",
+							"value": "UTF-8"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "a693cd12-e438-47e5-ae0c-cb84f60ab5a8",
+		"name": "CreatingVariablesInScript",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25772096"
+	},
+	"item": [
+		{
+			"name": "set&get&unsetVariables",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"pm.globals.set(\"firstName2\",\"Undertaker\")\r",
+							"pm.globals.set(\"lastName2\",\"kane\")\r",
+							"pm.globals.set(\"email2\", \"Undertaker@gmail.com\")\r",
+							"pm.environment.set(\"TestingThisVariable\", \"Nothing\");"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"console.log(pm.globals.get(\"firstName2\"))\r",
+							"console.log(pm.globals.get(\"lastName2\"))\r",
+							"console.log(pm.globals.get(\"email2\"))\r",
+							"pm.environment.unset(\"TestingThisVariable\")"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"first_name\": \"{{firstName2}}\",\r\n    \"last_name\": \"{{lastName2}}\",\r\n    \"email\": \"{{email2}}\"\r\n  }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"employees"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

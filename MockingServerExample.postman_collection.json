@@ -1,0 +1,220 @@
+{
+	"info": {
+		"_postman_id": "6b4c9dbc-f096-450e-8bd0-8faacd6d9ffa",
+		"name": "MockingServerExample",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25772096"
+	},
+	"item": [
+		{
+			"name": "GetAllEmployees",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"ValidatingTheResponseCode\",function(){\r",
+							"    pm.response.to.have.status(200)\r",
+							"    pm.response.to.have.status(\"OK\")\r",
+							"    var jsonData=JSON.parse(responseBody)\r",
+							"    pm.expect(jsonData[0].email).to.equal(\"sebastian@codingthesmartway.com\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://d28ca2a9-9e92-4bc6-9942-29092df49c69.mock.pstmn.io/employees",
+					"protocol": "https",
+					"host": [
+						"d28ca2a9-9e92-4bc6-9942-29092df49c69",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"employees"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "GetResponseExample",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://d28ca2a9-9e92-4bc6-9942-29092df49c69.mock.pstmn.io/employees",
+							"protocol": "https",
+							"host": [
+								"d28ca2a9-9e92-4bc6-9942-29092df49c69",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"employees"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Sat, 18 Feb 2023 06:36:05 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "164"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "x-srv-trace",
+							"value": "v=1;t=c1a04ac71c85c1b8"
+						},
+						{
+							"key": "x-srv-span",
+							"value": "v=1;s=e5a829edd1983ae5"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "X-RateLimit-Limit",
+							"value": "120"
+						},
+						{
+							"key": "X-RateLimit-Remaining",
+							"value": "119"
+						},
+						{
+							"key": "X-RateLimit-Reset",
+							"value": "1676702225"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a4-7hO0T/XLq3TuFViTu2ZVQQdIY+A\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"first_name\": \"Sebastian\",\n        \"last_name\": \"Eschweiler\",\n        \"email\": \"sebastian@codingthesmartway.com\"\n    },\n    {\n        \"id\": 2,\n        \"first_name\": \"Steve\",\n        \"last_name\": \"Palmer\",\n        \"email\": \"steve@codingthesmartway.com\"\n    },\n    {\n        \"first_name\": \"Akash\",\n        \"last_name\": \"Kumar\",\n        \"email\": \"Manimaran@codingthesmartway.com\",\n        \"id\": 4\n    },\n    {\n        \"first_name\": \"Anderson\",\n        \"last_name\": \"Raj\",\n        \"email\": \"Anderson@gmail.com\",\n        \"id\": 5\n    },\n    {\n        \"first_name\": \"RandyOrton\",\n        \"last_name\": \"LegendKiller\",\n        \"email\": \"randyorton@gamil.com\",\n        \"id\": 6\n    },\n    {\n        \"first_name\": \"Saraswathi\",\n        \"last_name\": \"kumar\",\n        \"email\": \"Saraswathi@gmail.com\",\n        \"id\": 7\n    },\n    {\n        \"first_name\": \"Rusitha\",\n        \"last_name\": \"vanitharajan\",\n        \"email\": \"rusitha@gmail.com\",\n        \"id\": 8\n    },\n    {\n        \"first_name\": \"Durga\",\n        \"last_name\": \"Kumar\",\n        \"email\": \"Durga@gmail.com\",\n        \"id\": 9\n    },\n    {\n        \"first_name\": \"Undertaker\",\n        \"last_name\": \"kane\",\n        \"email\": \"Undertaker@gmail.com\",\n        \"id\": 10\n    },\n    {\n        \"first_name\": \"Undertaker\",\n        \"last_name\": \"kane\",\n        \"email\": \"Undertaker@gmail.com\",\n        \"id\": 11\n    },\n    {\n        \"first_name\": \"Undertaker\",\n        \"last_name\": \"kane\",\n        \"email\": \"Undertaker@gmail.com\",\n        \"id\": 12\n    },\n    {\n        \"first_name\": \"Undertaker\",\n        \"last_name\": \"kane\",\n        \"email\": \"Undertaker@gmail.com\",\n        \"id\": 13\n    },\n    {\n        \"first_name\": \"Undertaker\",\n        \"last_name\": \"kane\",\n        \"email\": \"Undertaker@gmail.com\",\n        \"id\": 14\n    },\n    {\n        \"first_name\": \"Undertaker\",\n        \"last_name\": \"kane\",\n        \"email\": \"Undertaker@gmail.com\",\n        \"id\": 15\n    },\n    {\n        \"first_name\": \"Saraswathi\",\n        \"last_name\": \"Kumar\",\n        \"email\": \"Saraswathi@gmail.com\",\n        \"id\": 16\n    },\n    {\n        \"first_name\": \"Kumar\",\n        \"last_name\": \"Kumar\",\n        \"email\": \"Kumar@gmail.com\",\n        \"id\": 17\n    },\n    {\n        \"first_name\": \"Durga\",\n        \"last_name\": \"Kumar\",\n        \"email\": \"Durga@gmail.com\",\n        \"id\": 18\n    },\n    {\n        \"first_name\": \"Pathi Ayya\",\n        \"last_name\": \"Dhanakodi\",\n        \"email\": \"PathiAyya@gmail.com\",\n        \"id\": 19\n    },\n    {\n        \"first_name\": \"Ambika\",\n        \"last_name\": \"Rajesh\",\n        \"email\": \"Rajesh@codingthesmartway.com\",\n        \"id\": 20\n    },\n    {\n        \"first_name\": \"Chandran\",\n        \"last_name\": \"Sakala\",\n        \"email\": \"Chandran@codingthesmartway.com\",\n        \"id\": 21\n    },\n    {\n        \"first_name\": \"Akashuj9bjuu7f2\",\n        \"last_name\": \"Kumar\",\n        \"email\": \"Akashuj9bjuu7f2@gmail.com\",\n        \"id\": 22\n    },\n    {\n        \"first_name\": \"Akash4akxe0slcky\",\n        \"last_name\": \"Kumar\",\n        \"email\": \"Akash4akxe0slcky@gmail.com\",\n        \"id\": 23\n    },\n    {\n        \"first_name\": \"Akashzlf3a1quxb\",\n        \"last_name\": \"Kumar\",\n        \"email\": \"Akashzlf3a1quxb@gmail.com\",\n        \"id\": 24\n    },\n    {\n        \"first_name\": \"Akashfv6rjnncq3a\",\n        \"last_name\": \"Kumar\",\n        \"email\": \"Akashfv6rjnncq3a@gmail.com\",\n        \"id\": 25\n    },\n    {\n        \"first_name\": \"AkashManismx668buinb\",\n        \"last_name\": \"Kumar\",\n        \"email\": \"Akashsmx668buinb@gmail.com\",\n        \"id\": 26\n    },\n    {\n        \"first_name\": \"{{first_name}}\",\n        \"last_name\": \"Kumar\",\n        \"email\": \"Manimaran@codingthesmartway.com\",\n        \"id\": 27\n    },\n    {\n        \"first_name\": \"{{first_name}}\",\n        \"last_name\": \"Kumar\",\n        \"email\": \"Manimaran@codingthesmartway.com\",\n        \"id\": 28\n    },\n    {\n        \"firstName\": \"{{first_name}}\",\n        \"last_name\": \"Kumar\",\n        \"email\": \"Manimaran@codingthesmartway.com\",\n        \"id\": 29\n    },\n    {\n        \"firstName\": \"Durga\",\n        \"last_name\": \"Kumar\",\n        \"email\": \"Manimaran@codingthesmartway.com\",\n        \"id\": 30\n    },\n    {\n        \"first_name\": \"Ambika\",\n        \"last_name\": \"Rajesh\",\n        \"email\": \"Rajesh@codingthesmartway.com\",\n        \"id\": 31\n    },\n    {\n        \"first_name\": \"Chandran\",\n        \"last_name\": \"Sakala\",\n        \"email\": \"Chandran@codingthesmartway.com\",\n        \"id\": 32\n    }\n]\n     "
+				}
+			]
+		},
+		{
+			"name": "CreatingOneEmployees",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"ValidatingFirstName\",function(){\r",
+							"    var jsonData=JSON.parse(responseBody)\r",
+							"    pm.expect(jsonData.firstName).to.equal(\"Mr.perfect\")\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://d28ca2a9-9e92-4bc6-9942-29092df49c69.mock.pstmn.io/employees",
+					"protocol": "https",
+					"host": [
+						"d28ca2a9-9e92-4bc6-9942-29092df49c69",
+						"mock",
+						"pstmn",
+						"io"
+					],
+					"path": [
+						"employees"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "PostResponseExample",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"firstName\": \"Mr.perfect\",\r\n    \"last_name\": \"Kumar\",\r\n    \"email\": \"Mr.perfect@codingthesmartway.com\"\r\n  }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://d28ca2a9-9e92-4bc6-9942-29092df49c69.mock.pstmn.io/employees",
+							"protocol": "https",
+							"host": [
+								"d28ca2a9-9e92-4bc6-9942-29092df49c69",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"path": [
+								"employees"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"firstName\": \"Mr.perfect\",\n    \"last_name\": \"Kumar\",\n    \"email\": \"Mr.perfect@codingthesmartway.com\"\n}"
+				}
+			]
+		}
+	]
+}
